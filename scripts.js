@@ -76,6 +76,17 @@ function fetchManualTournamentRankings() {
     displayRankings(endpoint, 'tournamentRankings', 'tournamentLoadingSpinner');
 }
 
+function fetchTeamRankings() {
+    const teamIds = document.getElementById('teamIds').value;
+    if (!teamIds) {
+        alert("Please enter team IDs separated by commas.");
+        return;
+    }
+    const endpoint = `https://k21eu7lqrd.execute-api.us-west-2.amazonaws.com/Beta/team-ranking?team_ids=${teamIds}`;
+    displayRankings(endpoint, 'teamRankings', 'teamLoadingSpinner');
+}
+
+
 
 
 // Initial fetch for global rankings

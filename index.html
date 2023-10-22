@@ -38,6 +38,16 @@
 <div class="spinner" id="tournamentLoadingSpinner"></div>
 <div class="rankings-list" id="tournamentRankings"></div>
 
+<h2>Team Rankings</h2>
+<label for="teamIds">Enter Team IDs (comma-separated):</label>
+<textarea id="teamIds" rows="4" cols="50" placeholder="Enter comma-separated team IDs..."></textarea>
+<br>
+<button onclick="fetchTeamRankings()">Fetch Team Rankings</button>
+<div class="spinner" id="teamLoadingSpinner"></div>
+<div class="rankings-list" id="teamRankings"></div>
+
+
+
 <script src="scripts.js"></script>
 </body>
 </html>
