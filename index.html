@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rankings Display</title>
+</head>
+<body>
+
+<h2>Global Rankings</h2>
+<label for="numberOfTeams">Number of Teams:</label>
+<input type="number" id="numberOfTeams" value="10">
+<button onclick="fetchGlobalRankings()">Fetch Global Rankings</button>
+<div class="spinner" id="globalLoadingSpinner"></div>
+<div class="rankings-list" id="globalRankings"></div>
+
+<h2>Tournament Rankings</h2>
+
+<label for="manualTournamentId">Or Enter Tournament ID:</label>
+<input type="text" id="manualTournamentId" placeholder="Manual Tournament ID..">
+<button onclick="fetchManualTournamentRankings()">Fetch By ID</button>
+
+<label for="tournamentDropdown">Choose a Tournament:</label>
+<select id="tournamentDropdown">
+    <option value="110848560874526298">Season Finals 2023</option>
+    <option value="110535609415063567">Summer 2023</option>
+    <option value="110847340080101648">Playoffs - Summer 2023</option>
+    <option value="110825936250664572">Regional Finals 2023</option>
+    <option value="110733838935136200">#2 Summer 2023</option>
+    <option value="110423696147088301">Summer 2023 - PCS</option>
+    <option value="110416959491275651">Summer 2023 - VCS</option>
+    <option value="110507407705819578">2023 - LJL Academy</option>
+    <option value="110428603624764603">#1 Summer 2023</option>
+    <option value="110429332688604205">Summer 2023 - LEC</option>
+</select>
+<button onclick="fetchTournamentRankings()">Fetch Rankings</button>
+<div class="spinner" id="tournamentLoadingSpinner"></div>
+<div class="rankings-list" id="tournamentRankings"></div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
