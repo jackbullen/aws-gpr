@@ -1,11 +1,10 @@
 function displayRankings(endpoint, elementId, spinnerId) {
-    // Show the spinner
+    // loading spinner
     document.getElementById(spinnerId).style.display = 'block';
 
     fetch(endpoint)
         .then(response => response.json())
         .then(data => {
-            // Hide the spinner
             document.getElementById(spinnerId).style.display = 'none';
 
             const rankingsDiv = document.getElementById(elementId);
@@ -17,7 +16,6 @@ function displayRankings(endpoint, elementId, spinnerId) {
             rankingsDiv.innerHTML = rankingsHTML;
         })
         .catch(error => {
-            // Hide the spinner in case of an error
             document.getElementById(spinnerId).style.display = 'none';
             console.error("Error fetching data:", error);
         });
@@ -82,12 +80,9 @@ function fetchTeamRankings() {
         alert("Please enter team IDs separated by commas.");
         return;
     }
-    const endpoint = `https://k21eu7lqrd.execute-api.us-west-2.amazonaws.com/Beta/team-ranking?team_ids=${teamIds}`;
+    const endpoint = `https://k21eu7lqrd.execute-api.us-west-2.amazonaws.com/Beta/team-rankings?team_ids=${teamIds}`;
     displayRankings(endpoint, 'teamRankings', 'teamLoadingSpinner');
 }
 
-
-
-
-// Initial fetch for global rankings
+// fetch the global rankings on page load
 fetchGlobalRankings();
