@@ -32,18 +32,20 @@ function fetchGlobalRankings() {
     const int_underdog_cutoff = document.getElementById('int_underdog_cutoff').value;
     const reg_underdog_cutoff = document.getElementById('reg_underdog_cutoff').value;
 
-    const endpoint = `https://k21eu7lqrd.execute-api.us-west-2.amazonaws.com/Beta/global-rankings?number_of_teams=${numberOfTeams}` + 
-                     `&dominance=${dominance}` +
-                     `&consistency=${consistency}` +
-                     `&regional_strength=${regional_strength}` +
-                     `&streak_bonus=${streak_bonus}` +
-                     `&streak_cutoff=${streak_cutoff}` +
-                     `&underdog_bonus=${underdog_bonus}` +
-                     `&int_underdog_cutoff=${int_underdog_cutoff}` +
-                     `&reg_underdog_cutoff=${reg_underdog_cutoff}`;
+    let endpoint = `https://k21eu7lqrd.execute-api.us-west-2.amazonaws.com/Beta/global-rankings?`;
+    if (numberOfTeams) endpoint += `&number_of_teams=${numberOfTeams}`;
+    if (dominance) endpoint += `&dominance=${dominance}`;
+    if (consistency) endpoint += `&consistency=${consistency}`;
+    if (regional_strength) endpoint += `&regional_strength=${regional_strength}`;
+    if (streak_bonus) endpoint += `&streak_bonus=${streak_bonus}`;
+    if (streak_cutoff) endpoint += `&streak_cutoff=${streak_cutoff}`;
+    if (underdog_bonus) endpoint += `&underdog_bonus=${underdog_bonus}`;
+    if (int_underdog_cutoff) endpoint += `&int_underdog_cutoff=${int_underdog_cutoff}`;
+    if (reg_underdog_cutoff) endpoint += `&reg_underdog_cutoff=${reg_underdog_cutoff}`;
 
     displayRankings(endpoint, 'globalRankings', 'globalLoadingSpinner');
 }
+
 
 function fetchTournamentRankings() {
     const tournamentId = document.getElementById('tournamentDropdown').value; // Use 'tournamentDropdown' here
