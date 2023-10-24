@@ -39,9 +39,9 @@ Using the metrics, we compute a weighted score for each team. The equation is:
 $$\text{weighted score} = \sum_{i=1}^{n} \text{metric}_i \times \text{weight}_i$$
 
 Where:
-- $ n $ is the total number of metrics.
-- $ \text{metric}_i $ is the value of the $ i^{th} $ metric for a team.
-- $ \text{weight}_i $ is the predetermined weight for the $ i^{th} $ metric, which can be adjusted based on user input.
+- $n$ is the total number of metrics.
+- $\text{metric}_i$ is the value of the $i^{th}$ metric for a team.
+- $\text{weight}_i$ is the predetermined weight for the $i^{th}$ metric, which can be adjusted based on user input.
 
 Teams are then sorted in descending order based on their `weighted_score`. The higher the score, the higher they rank!
 
