@@ -13,20 +13,14 @@ With this data, we get a holistic view of each team's performance, both domestic
 Leveraging this data, we craft a series of metrics to evaluate each team's prowess:
 
 1. **Total Games**:
-$$
-\text{total\_games} = \text{wins} + \text{losses}
-$$
+$$\text{total\_games} = \text{wins} + \text{losses}$$
 
 2. **Win Percentage (Consistency)**:
-$$
-\text{win\_percentage} = \frac{\text{wins}}{\text{total\_games}}
-$$
+$$\text{win\_percentage} = \frac{\text{wins}}{\text{total\_games}}$$
 This provides a direct measure of a team's success rate.
 
 3. **Dominance**:
-$$
-\text{dominance} = \text{wins} - \text{losses}
-$$
+$$\text{dominance} = \text{wins} - \text{losses}$$
 A measure that captures the net superiority of a team over its adversaries.
 
 4. **Regional Strength**:
@@ -42,9 +36,7 @@ Teams that have shown resilience and potential despite not shining brightly on t
 
 Using the metrics, we compute a weighted score for each team. The equation is:
 
-$$
-\text{weighted\_score} = \sum_{i=1}^{n} \text{metric}_i \times \text{weight}_i
-$$
+$$\text{weighted\_score} = \sum_{i=1}^{n} \text{metric}_i \times \text{weight}_i$$
 
 Where:
 - $ n $ is the total number of metrics.
