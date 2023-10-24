@@ -16,7 +16,7 @@ Leveraging this data, we craft a series of metrics to evaluate each team's prowe
 $$\text{total\_games} = \text{wins} + \text{losses}$$
 
 2. **Win Percentage (Consistency)**:
-$$\text{win\_percentage} = \frac{\text{wins}}{\text{total\_games}}$$
+$$\text{win}_{\text{percentage}} = \frac{\text{wins}}{\text{total}_{\text{games}}$$
 This provides a direct measure of a team's success rate.
 
 3. **Dominance**:
