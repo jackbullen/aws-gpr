@@ -23,7 +23,25 @@ function displayRankings(endpoint, elementId, spinnerId) {
 
 function fetchGlobalRankings() {
     const numberOfTeams = document.getElementById('numberOfTeams').value;
-    const endpoint = `https://k21eu7lqrd.execute-api.us-west-2.amazonaws.com/Beta/global-rankings?number_of_teams=${numberOfTeams}`;
+    const dominance = document.getElementById('dominance').value;
+    const consistency = document.getElementById('consistency').value;
+    const regional_strength = document.getElementById('regional_strength').value;
+    const streak_bonus = document.getElementById('streak_bonus').value;
+    const streak_cutoff = document.getElementById('streak_cutoff').value;
+    const underdog_bonus = document.getElementById('underdog_bonus').value;
+    const int_underdog_cutoff = document.getElementById('int_underdog_cutoff').value;
+    const reg_underdog_cutoff = document.getElementById('reg_underdog_cutoff').value;
+
+    const endpoint = `https://k21eu7lqrd.execute-api.us-west-2.amazonaws.com/Beta/global-rankings?number_of_teams=${numberOfTeams}` + 
+                     `&dominance=${dominance}` +
+                     `&consistency=${consistency}` +
+                     `&regional_strength=${regional_strength}` +
+                     `&streak_bonus=${streak_bonus}` +
+                     `&streak_cutoff=${streak_cutoff}` +
+                     `&underdog_bonus=${underdog_bonus}` +
+                     `&int_underdog_cutoff=${int_underdog_cutoff}` +
+                     `&reg_underdog_cutoff=${reg_underdog_cutoff}`;
+
     displayRankings(endpoint, 'globalRankings', 'globalLoadingSpinner');
 }
 

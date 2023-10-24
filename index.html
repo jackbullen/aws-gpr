@@ -8,12 +8,59 @@
 </head>
 <body>
 
-<h2>Global Rankings</h2>
-<label for="numberOfTeams">Number of Teams:</label>
-<input type="number" id="numberOfTeams" value="10">
-<button onclick="fetchGlobalRankings()">Fetch Global Rankings</button>
+    <h2>Global Rankings</h2>
+<div class="parameter-row">
+    <div class="inline-input">
+        <label for="dominance">Dominance:</label>
+        <input type="number" id="dominance" placeholder="Dominance">
+    </div>
+    <div class="inline-input">
+        <label for="consistency">Consistency:</label>
+        <input type="number" id="consistency" placeholder="Consistency">
+    </div>
+</div>
+<div class="parameter-row">
+    <div class="inline-input">
+        <label for="regional_strength">Regional Strength:</label>
+        <input type="number" id="regional_strength" placeholder="Regional Strength">
+    </div>
+    <div class="inline-input">
+        <label for="streak_bonus">Streak Bonus:</label>
+        <input type="number" id="streak_bonus" placeholder="Streak Bonus">
+    </div>
+</div>
+<div class="parameter-row">
+    <div class="inline-input">
+        <label for="streak_cutoff">Streak Cutoff:</label>
+        <input type="number" id="streak_cutoff" placeholder="Streak Cutoff">
+    </div>
+    <div class="inline-input">
+        <label for="underdog_bonus">Underdog Bonus:</label>
+        <input type="number" id="underdog_bonus" placeholder="Underdog Bonus">
+    </div>
+</div>
+<div class="parameter-row">
+    <div class="inline-input">
+        <label for="int_underdog_cutoff">Int. Underdog Cutoff:</label>
+        <input type="number" id="int_underdog_cutoff" placeholder="Int. Underdog Cutoff">
+    </div>
+    <div class="inline-input">
+        <label for="reg_underdog_cutoff">Reg. Underdog Cutoff:</label>
+        <input type="number" id="reg_underdog_cutoff" placeholder="Reg. Underdog Cutoff">
+    </div>
+</div>
+<div class="parameter-row">
+    <div class="inline-input">
+        <label for="numberOfTeams">Number of Teams:</label>
+        <input type="number" id="numberOfTeams" value="10">
+    </div>
+    <div class="inline-input">
+        <button onclick="fetchGlobalRankings()">Fetch Global Rankings</button>
+    </div>
+</div>
 <div class="spinner" id="globalLoadingSpinner"></div>
 <div class="rankings-list" id="globalRankings"></div>
+
 
 <h2>Tournament Rankings</h2>
 
