@@ -13,10 +13,10 @@ With this data, we get a holistic view of each team's performance, both domestic
 Leveraging this data, we craft a series of metrics to evaluate each team's prowess:
 
 1. **Total Games**:
-$$\text{total\_games} = \text{wins} + \text{losses}$$
+$$\text{total}_{games} = \text{wins} + \text{losses}$$
 
 2. **Win Percentage (Consistency)**:
-$$\text{win}_{\text{percentage}} = \frac{\text{wins}}{\text{total}_{\text{games}}$$
+$$\text{win}_{percentage} = \frac{\text{wins}}{\text{total}_{games}$$
 This provides a direct measure of a team's success rate.
 
 3. **Dominance**:
@@ -36,7 +36,7 @@ Teams that have shown resilience and potential despite not shining brightly on t
 
 Using the metrics, we compute a weighted score for each team. The equation is:
 
-$$\text{weighted\_score} = \sum_{i=1}^{n} \text{metric}_i \times \text{weight}_i$$
+$$\text{weighted}_{score} = \sum_{i=1}^{n} \text{metric}_i \times \text{weight}_i$$
 
 Where:
 - $ n $ is the total number of metrics.
